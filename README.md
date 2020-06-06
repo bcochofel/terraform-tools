@@ -1,7 +1,7 @@
 # Terraform Tools
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-![CI](https://github.com/bcochofel/terraform-tools/workflows/CI/badge.svg)
+![Publish Docker image](https://github.com/bcochofel/terraform-tools/workflows/Publish%20Docker%20image/badge.svg)
 [![Docker](https://img.shields.io/badge/Docker%20Hub-bcochofel%2Fterraform--tools-blue)](https://hub.docker.com/r/bcochofel/terraform-tools)
 
 [![GitHub license](https://img.shields.io/github/license/bcochofel/terraform-tools.svg)](https://github.com/bcochofel/terraform-tools/blob/master/LICENSE)
