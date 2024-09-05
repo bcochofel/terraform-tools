@@ -18,12 +18,26 @@
 
 Container image with Terraform tools for static code analysis.
 
+## List of tools
+
+The container supports the following tools:
+
+- [arkade](https://github.com/alexellis/arkade)
+- [tfenv](https://github.com/tfutils/tfenv)
+- [terraform](https://developer.hashicorp.com/terraform/install)
+
 ## Build Container
 
 To build the container run:
 
 ```bash
 docker build . -t terraform-tools:latest
+```
+
+The Dockerfile uses build args, so if you want to build the image with specific version of terraform, for instance, you can run
+
+```bash
+docker build . --build-arg TERRAFORM_VERSION=1.9.0 -t terraform-tools:latest
 ```
 
 ## Test Container
