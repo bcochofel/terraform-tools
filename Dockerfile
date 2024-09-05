@@ -2,9 +2,9 @@ FROM alpine:3.20
 LABEL maintainer="Bruno Cochofel <bruno.cochofel@gmail.com>"
 
 ARG ARKADE_VERSION=0.11.23
-ARG TFENV_VERSION=v3.0.0
+ARG TFENV_VERSION=3.0.0
 ARG TERRAFORM_VERSION=1.9.5
-ARG TFLINT_VERSION=v0.53.0
+ARG TFLINT_VERSION=0.53.0
 ARG TFLINT_RULESET_AZURERM_VERSION=0.27.0
 ARG TFLINT_RULESET_AWS_VERSION=0.32.0
 ARG TFLINT_RULESET_GOOGLE_VERSION=0.30.0
@@ -33,13 +33,13 @@ RUN curl -s -Lo arkade https://github.com/alexellis/arkade/releases/download/${A
   mv arkade ${INSTALL_DIR}
 
 # install tfenv
-RUN git clone -b ${TFENV_VERSION} https://github.com/tfutils/tfenv.git ${WORKDIR}/.tfenv && \
+RUN git clone -b v${TFENV_VERSION} https://github.com/tfutils/tfenv.git ${WORKDIR}/.tfenv && \
   ln -s ${WORKDIR}/.tfenv/bin/* ${INSTALL_DIR} && \
   tfenv install ${TERRAFORM_VERSION} && \
   tfenv use ${TERRAFORM_VERSION}
 
 # install TFlint
-RUN curl -s -Lo tflint.zip https://github.com/terraform-linters/tflint/releases/download/${TFLINT_VERSION}/tflint_linux_amd64.zip && \
+RUN curl -s -Lo tflint.zip https://github.com/terraform-linters/tflint/releases/download/v${TFLINT_VERSION}/tflint_linux_amd64.zip && \
   unzip tflint.zip && \
   rm -f tflint.zip && \
   chmod +x tflint && \
