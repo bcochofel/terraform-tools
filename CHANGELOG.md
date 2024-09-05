@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/bcochofel/terraform-tools/compare/1.1.0...1.1.1) (2024-09-05)
+
+### Bug Fixes
+
+* semantic-release plugin for docker push ([131e158](https://github.com/bcochofel/terraform-tools/commit/131e158c212d7dd3e4c9beba4467c59f1dcb1dca))
+
 ## [1.1.0](https://github.com/bcochofel/terraform-tools/compare/1.0.0...1.1.0) (2024-09-05)
 
 ### Features
