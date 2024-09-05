@@ -22,6 +22,7 @@ The container supports the following tools:
 - [tflint-ruleset-azurerm](https://github.com/terraform-linters/tflint-ruleset-azurerm)
 - [tflint-ruleset-aws](https://github.com/terraform-linters/tflint-ruleset-aws)
 - [tflint-ruleset-google](https://github.com/terraform-linters/tflint-ruleset-google)
+- [terraform-docs](https://github.com/terraform-docs/terraform-docs)
 
 ## Build Container
 

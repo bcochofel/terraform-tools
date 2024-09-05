@@ -8,6 +8,7 @@ ARG TFLINT_VERSION=0.53.0
 ARG TFLINT_RULESET_AZURERM_VERSION=0.27.0
 ARG TFLINT_RULESET_AWS_VERSION=0.32.0
 ARG TFLINT_RULESET_GOOGLE_VERSION=0.30.0
+ARG TERRAFORM_DOCS_VERSION=0.18.0
 
 # install dependencies
 RUN apk --no-cache --update add \
@@ -45,7 +46,7 @@ RUN curl -s -Lo tflint.zip https://github.com/terraform-linters/tflint/releases/
   chmod +x tflint && \
   mv tflint /usr/local/bin
 
-# install TFlint azurerm ruleset
+# install TFlint rulesets for AWS, AzureRM and Google
 COPY <<EOT .tflint.hcl
 plugin "azurerm" {
     enabled = true
@@ -65,6 +66,13 @@ plugin "google" {
     source  = "github.com/terraform-linters/tflint-ruleset-google"
 }
 EOT
+
+# install terraform-docs
+RUN curl -s -Lo terraform-docs.tar.gz https://github.com/terraform-docs/terraform-docs/releases/download/v${TERRAFORM_DOCS_VERSION}/terraform-docs-v${TERRAFORM_DOCS_VERSION}-linux-amd64.tar.gz && \
+    tar xzf terraform-docs.tar.gz && \
+    rm -f terraform-docs.tar.gz LICENSE README.md && \
+    chmod +x terraform-docs && \
+    mv terraform-docs /usr/local/bin
 
 RUN chown -R appuser:appgroup ${WORKDIR}
 USER appuser
