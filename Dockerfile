@@ -14,6 +14,7 @@ ARG TERRAFORM_DOCS_VERSION=0.18.0
 ARG TFSEC_VERSION=1.28.10
 ARG TRIVY_VERSION=0.55.0
 ARG CHECKOV_VERSION=3.2.245
+ARG PRECOMMIT_VERSION=3.8.0
 
 # install dependencies
 RUN apk --no-cache --update add \
@@ -95,6 +96,9 @@ RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/
 
 # install checkov
 RUN pip3 install checkov==${CHECKOV_VERSION}
+
+# install pre-commit
+RUN pip3 install pre-commit==${PRECOMMIT_VERSION}
 
 RUN chown -R appuser:appgroup ${WORKDIR}
 USER appuser

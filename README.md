@@ -28,6 +28,7 @@ The container supports the following tools:
 - [tgenv](https://github.com/tgenv/tgenv)
 - [terragrunt](https://github.com/gruntwork-io/terragrunt)
 - [checkov](https://github.com/bridgecrewio/checkov)
+- [pre-commit](https://pre-commit.com/)
 
 ## Build Container
 
