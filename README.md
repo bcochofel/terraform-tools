@@ -20,6 +20,8 @@ The container supports the following tools:
 - [terraform](https://developer.hashicorp.com/terraform/install)
 - [TFlint](https://github.com/terraform-linters/tflint)
 - [tflint-ruleset-azurerm](https://github.com/terraform-linters/tflint-ruleset-azurerm)
+- [tflint-ruleset-aws](https://github.com/terraform-linters/tflint-ruleset-aws)
+- [tflint-ruleset-google](https://github.com/terraform-linters/tflint-ruleset-google)
 
 ## Build Container
 

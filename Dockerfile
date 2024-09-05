@@ -6,6 +6,8 @@ ARG TFENV_VERSION=v3.0.0
 ARG TERRAFORM_VERSION=1.9.5
 ARG TFLINT_VERSION=v0.53.0
 ARG TFLINT_RULESET_AZURERM_VERSION=0.27.0
+ARG TFLINT_RULESET_AWS_VERSION=0.32.0
+ARG TFLINT_RULESET_GOOGLE_VERSION=0.30.0
 
 # install dependencies
 RUN apk --no-cache --update add \
@@ -49,6 +51,18 @@ plugin "azurerm" {
     enabled = true
     version = "${TFLINT_RULESET_AZURERM_VERSION}"
     source  = "github.com/terraform-linters/tflint-ruleset-azurerm"
+}
+
+plugin "aws" {
+    enabled = true
+    version = "${TFLINT_RULESET_AWS_VERSION}"
+    source  = "github.com/terraform-linters/tflint-ruleset-aws"
+}
+
+plugin "google" {
+    enabled = true
+    version = "${TFLINT_RULESET_GOOGLE_VERSION}"
+    source  = "github.com/terraform-linters/tflint-ruleset-google"
 }
 EOT
 
