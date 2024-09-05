@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM python:alpine3.20
 LABEL maintainer="Bruno Cochofel <bruno.cochofel@gmail.com>"
 
 ARG ARKADE_VERSION=0.11.23
@@ -13,6 +13,7 @@ ARG TFLINT_RULESET_GOOGLE_VERSION=0.30.0
 ARG TERRAFORM_DOCS_VERSION=0.18.0
 ARG TFSEC_VERSION=1.28.10
 ARG TRIVY_VERSION=0.55.0
+ARG CHECKOV_VERSION=3.2.245
 
 # install dependencies
 RUN apk --no-cache --update add \
@@ -91,6 +92,9 @@ RUN curl -s -Lo tfsec https://github.com/tfsec/tfsec/releases/download/v${TFSEC_
 
 # install trivy
 RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v${TRIVY_VERSION}
+
+# install checkov
+RUN pip3 install checkov==${CHECKOV_VERSION}
 
 RUN chown -R appuser:appgroup ${WORKDIR}
 USER appuser

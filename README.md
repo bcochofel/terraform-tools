@@ -27,6 +27,7 @@ The container supports the following tools:
 - [trivy](https://github.com/aquasecurity/trivy)
 - [tgenv](https://github.com/tgenv/tgenv)
 - [terragrunt](https://github.com/gruntwork-io/terragrunt)
+- [checkov](https://github.com/bridgecrewio/checkov)
 
 ## Build Container
 
