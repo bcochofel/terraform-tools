@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/bcochofel/terraform-tools/compare/1.1.1...1.2.0) (2024-09-05)
+
+### Features
+
+* support for checkov ([06c9713](https://github.com/bcochofel/terraform-tools/commit/06c9713875dc6cdea94ff0b30dd110d125497d2d))
+* support for terraform-docs ([726a74e](https://github.com/bcochofel/terraform-tools/commit/726a74e37e79cf35914a6c7bd3a5908b482355f4))
+* support for TFlint with tflint-ruleset-aws and tflint-ruleset-google ([ce1d09c](https://github.com/bcochofel/terraform-tools/commit/ce1d09c3efd594016973660c762fe8d41fb7c3e7))
+* support for TFlint with tflint-ruleset-aws and tflint-ruleset-google ([fa8e122](https://github.com/bcochofel/terraform-tools/commit/fa8e1225531d411d43c72072807875de73185414))
+* support for TFlint with tflint-ruleset-azurerm ([13129af](https://github.com/bcochofel/terraform-tools/commit/13129af943e5a04471717e3d84e4b2aa2ed00ab1))
+* support for TFsec and Trivy ([27c40d5](https://github.com/bcochofel/terraform-tools/commit/27c40d52a4e1801e7d9291713ace341ff62d1796))
+* support for tgenv and terragrunt ([81cb272](https://github.com/bcochofel/terraform-tools/commit/81cb2723e701414f68e14c13c115c74184930f60))
+
 ## [1.1.1](https://github.com/bcochofel/terraform-tools/compare/1.1.0...1.1.1) (2024-09-05)
 
 ### Bug Fixes
