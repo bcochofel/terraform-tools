@@ -26,10 +26,10 @@ jobs:
         with:
           node-version: "lts/*"
       - name: Install dependencies
-        run: npm install -g semantic-release @semantic-release/changelog conventional-changelog-conventionalcommits @semantic-release/git @eclass/semantic-release-docker
+        run: npm install -g semantic-release @semantic-release/changelog conventional-changelog-conventionalcommits @semantic-release/git @codedependant/semantic-release-docker
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_REGISTRY_USER: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_REGISTRY_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: npx semantic-release

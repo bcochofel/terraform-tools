@@ -18,16 +18,19 @@
             }
         ],
         [
-            "@eclass/semantic-release-docker",
+            "@codedependant/semantic-release-docker",
             {
-                "baseImageName": "terraform-tools",
-                "registries": [
-                    {
-                        "url": "docker.io",
-                        "imageName": "docker.io/bcochofel/terraform-tools",
-                        "user": "DOCKER_USERNAME",
-                        "password": "DOCKER_PASSWORD"
-                    }
+                "dockerTags": [
+                    "latest",
+                    "{{version}}",
+                    "{{major}}-latest",
+                    "{{major}}.{{minor}}"
+                ],
+                "dockerImage": "terraform-tools",
+                "dockerProject": "bcochofel/terraform-tools",
+                "dockerPlatform": [
+                    "linux/amd64",
+                    "linux/arm64"
                 ]
             }
         ],
