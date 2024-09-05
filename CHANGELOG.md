@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/bcochofel/terraform-tools/compare/1.2.0...1.3.0) (2024-09-05)
+
+### Features
+
+* support for pre-commit ([f1428a7](https://github.com/bcochofel/terraform-tools/commit/f1428a70977fa82d67669250ef755f81952ee105))
+
 ## [1.2.0](https://github.com/bcochofel/terraform-tools/compare/1.1.1...1.2.0) (2024-09-05)
 
 ### Features
