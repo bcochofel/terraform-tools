@@ -27,7 +27,7 @@
                     "{{major}}.{{minor}}"
                 ],
                 "dockerImage": "terraform-tools",
-                "dockerProject": "bcochofel/terraform-tools"
+                "dockerProject": "bcochofel"
             }
         ],
         [
