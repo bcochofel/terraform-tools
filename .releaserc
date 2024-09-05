@@ -27,11 +27,7 @@
                     "{{major}}.{{minor}}"
                 ],
                 "dockerImage": "terraform-tools",
-                "dockerProject": "bcochofel/terraform-tools",
-                "dockerPlatform": [
-                    "linux/amd64",
-                    "linux/arm64"
-                ]
+                "dockerProject": "bcochofel/terraform-tools"
             }
         ],
         [
