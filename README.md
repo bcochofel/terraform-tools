@@ -25,6 +25,8 @@ The container supports the following tools:
 - [terraform-docs](https://github.com/terraform-docs/terraform-docs)
 - [TFsec](https://github.com/aquasecurity/tfsec)
 - [trivy](https://github.com/aquasecurity/trivy)
+- [tgenv](https://github.com/tgenv/tgenv)
+- [terragrunt](https://github.com/gruntwork-io/terragrunt)
 
 ## Build Container
 

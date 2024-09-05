@@ -4,6 +4,8 @@ LABEL maintainer="Bruno Cochofel <bruno.cochofel@gmail.com>"
 ARG ARKADE_VERSION=0.11.23
 ARG TFENV_VERSION=3.0.0
 ARG TERRAFORM_VERSION=1.9.5
+ARG TGENV_VERSION=1.2.1
+ARG TERRAGRUNT_VERSION=0.67.3
 ARG TFLINT_VERSION=0.53.0
 ARG TFLINT_RULESET_AZURERM_VERSION=0.27.0
 ARG TFLINT_RULESET_AWS_VERSION=0.32.0
@@ -40,6 +42,12 @@ RUN git clone -b v${TFENV_VERSION} https://github.com/tfutils/tfenv.git ${WORKDI
   ln -s ${WORKDIR}/.tfenv/bin/* ${INSTALL_DIR} && \
   tfenv install ${TERRAFORM_VERSION} && \
   tfenv use ${TERRAFORM_VERSION}
+
+# intall tgenv
+RUN git clone -b v${TGENV_VERSION} https://github.com/tgenv/tgenv.git ${WORKDIR}/.tgenv && \
+  ln -s ${WORKDIR}/.tgenv/bin/* ${INSTALL_DIR} && \
+  tgenv install ${TERRAGRUNT_VERSION} && \
+  tgenv use ${TERRAGRUNT_VERSION}
 
 # install TFlint
 RUN curl -s -Lo tflint.zip https://github.com/terraform-linters/tflint/releases/download/v${TFLINT_VERSION}/tflint_linux_amd64.zip && \
