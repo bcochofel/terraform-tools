@@ -9,16 +9,27 @@
 [![GitHub issues](https://img.shields.io/github/issues/bcochofel/terraform-tools.svg)](https://github.com/bcochofel/terraform-tools/issues/)
 [![GitHub forks](https://img.shields.io/github/forks/bcochofel/terraform-tools.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/bcochofel/terraform-tools/network/)
 [![GitHub stars](https://img.shields.io/github/stars/bcochofel/terraform-tools.svg?style=social&label=Star&maxAge=2592000)](https://github.com/bcochofel/terraform-tools/stargazers/)
+<!---
+[![Docker Automated build](https://img.shields.io/docker/automated/linuxcontainers/alpine.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/linuxcontainers/alpine/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/linuxcontainers/alpine.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/linuxcontainers/alpine/)
+![Github Pulls](https://img.shields.io/github/issues-pr/linuxcontainers/alpine?style=for-the-badge&logo=github)
+[![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/linuxcontainers/alpine?logo=docker&style=for-the-badge)](https://hub.docker.com/r/linuxcontainers/alpine)
+-->
 
-This repository is based on the work from [stefanprodan/kube-tools](https://github.com/stefanprodan/kube-tools) and
-[hashicorp/terraform-github-actions](https://github.com/hashicorp/terraform-github-actions)
+Container image with Terraform tools for static code analysis.
 
-# Requirements
+## Build Container
 
-* [`pre-commit`](https://pre-commit.com/#install)
+To build the container run:
 
-After installing `pre-commit` just execute:
+```bash
+docker build . -t terraform-tools:latest
+```
 
-```ShellSession
-pre-commit install
+## Test Container
+
+You can test the container by running
+
+```bash
+docker run -it terraform-tools:latest terraform version
 ```
