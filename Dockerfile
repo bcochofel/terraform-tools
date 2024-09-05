@@ -9,6 +9,8 @@ ARG TFLINT_RULESET_AZURERM_VERSION=0.27.0
 ARG TFLINT_RULESET_AWS_VERSION=0.32.0
 ARG TFLINT_RULESET_GOOGLE_VERSION=0.30.0
 ARG TERRAFORM_DOCS_VERSION=0.18.0
+ARG TFSEC_VERSION=1.28.10
+ARG TRIVY_VERSION=0.55.0
 
 # install dependencies
 RUN apk --no-cache --update add \
@@ -69,10 +71,18 @@ EOT
 
 # install terraform-docs
 RUN curl -s -Lo terraform-docs.tar.gz https://github.com/terraform-docs/terraform-docs/releases/download/v${TERRAFORM_DOCS_VERSION}/terraform-docs-v${TERRAFORM_DOCS_VERSION}-linux-amd64.tar.gz && \
-    tar xzf terraform-docs.tar.gz && \
-    rm -f terraform-docs.tar.gz LICENSE README.md && \
-    chmod +x terraform-docs && \
-    mv terraform-docs /usr/local/bin
+  tar xzf terraform-docs.tar.gz && \
+  rm -f terraform-docs.tar.gz LICENSE README.md && \
+  chmod +x terraform-docs && \
+  mv terraform-docs /usr/local/bin
+
+# install TFsec
+RUN curl -s -Lo tfsec https://github.com/tfsec/tfsec/releases/download/v${TFSEC_VERSION}/tfsec-linux-amd64 && \
+  chmod +x tfsec && \
+  mv tfsec /usr/local/bin
+
+# install trivy
+RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v${TRIVY_VERSION}
 
 RUN chown -R appuser:appgroup ${WORKDIR}
 USER appuser
