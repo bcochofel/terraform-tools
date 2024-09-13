@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.0](https://github.com/bcochofel/terraform-tools/compare/1.3.1...1.4.0) (2024-09-13)
+
+### Features
+
+* Change user to root for GH actions compatibility ([74ef055](https://github.com/bcochofel/terraform-tools/commit/74ef0552db2f86d7ad57162631f653f9ac8c41dc))
+
 ## [1.3.1](https://github.com/bcochofel/terraform-tools/compare/1.3.0...1.3.1) (2024-09-05)
 
 ### Bug Fixes
