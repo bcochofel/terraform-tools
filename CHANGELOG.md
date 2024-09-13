@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/bcochofel/terraform-tools/compare/1.4.0...1.4.1) (2024-09-13)
+
+### Bug Fixes
+
+* Remove workdir from container ([01572e2](https://github.com/bcochofel/terraform-tools/commit/01572e21b960cf0d2085226bca444ef3bdbc013c))
+
 ## [1.4.0](https://github.com/bcochofel/terraform-tools/compare/1.3.1...1.4.0) (2024-09-13)
 
 ### Features
