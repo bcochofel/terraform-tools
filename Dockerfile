@@ -26,10 +26,8 @@ RUN apk --no-cache --update add \
   zip && \
   rm -rf /var/cache/apk/*
 
-ENV WORKDIR=/root
+ENV WORKDIR=/tmp
 ENV INSTALL_DIR=/usr/local/bin/
-
-WORKDIR ${WORKDIR}
 
 # install arkade
 RUN curl -s -Lo arkade https://github.com/alexellis/arkade/releases/download/${ARKADE_VERSION}/arkade && \
