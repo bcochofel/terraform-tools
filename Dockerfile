@@ -26,12 +26,9 @@ RUN apk --no-cache --update add \
   zip && \
   rm -rf /var/cache/apk/*
 
-ENV WORKDIR=/home/appuser
+ENV WORKDIR=/root
 ENV INSTALL_DIR=/usr/local/bin/
 
-RUN addgroup -S appgroup && adduser -SDH appuser -G appgroup
-RUN mkdir -p ${WORKDIR}
-RUN chown -R appuser:appgroup ${WORKDIR}
 WORKDIR ${WORKDIR}
 
 # install arkade
@@ -100,6 +97,4 @@ RUN pip3 install checkov==${CHECKOV_VERSION}
 # install pre-commit
 RUN pip3 install pre-commit==${PRECOMMIT_VERSION}
 
-RUN chown -R appuser:appgroup ${WORKDIR}
-USER appuser
 RUN tflint --init
