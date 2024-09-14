@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.0](https://github.com/bcochofel/terraform-tools/compare/1.4.0...1.5.0) (2024-09-14)
+
+### Features
+
+* appuser for container ([ab57466](https://github.com/bcochofel/terraform-tools/commit/ab57466e5d17f4b870d0b51c86db0b5442b16dbb))
+
 ## [1.4.0](https://github.com/bcochofel/terraform-tools/compare/1.3.1...1.4.0) (2024-09-14)
 
 ### Features
