@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/bcochofel/terraform-tools/compare/1.5.0...1.6.0) (2024-09-14)
+
+### Features
+
+* entrypoint script ([7b632c9](https://github.com/bcochofel/terraform-tools/commit/7b632c9233ee93da1058aa6649770f8c6ff55122))
+
 ## [1.5.0](https://github.com/bcochofel/terraform-tools/compare/1.4.0...1.5.0) (2024-09-14)
 
 ### Features
