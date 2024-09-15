@@ -51,3 +51,7 @@ You can test the container by running
 ```bash
 docker run -it terraform-tools:latest terraform version
 ```
+
+## References
+
+- [GitHub Actions - Dockerfile support](https://docs.github.com/en/actions/sharing-automations/creating-actions/dockerfile-support-for-github-actions)
