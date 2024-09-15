@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/bcochofel/terraform-tools/compare/1.6.0...1.6.1) (2024-09-15)
+
+### Bug Fixes
+
+* git safe.directory in entrypoint runs every time ([f6118e1](https://github.com/bcochofel/terraform-tools/commit/f6118e1fcef0ca889eb6f9e96a900b811c6ffb81))
+
 ## [1.6.0](https://github.com/bcochofel/terraform-tools/compare/1.5.0...1.6.0) (2024-09-14)
 
 ### Features
